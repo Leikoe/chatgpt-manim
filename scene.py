@@ -18,8 +18,10 @@ class ChatGPTVideo(VoiceoverScene):
                             It can generate text, answer questions, and even write code.") as tracker:
             image = ImageMobject("assets\ChatGPT_logo.svg.png")  # Replace with your image file name
             self.play(FadeIn(image.scale(0.5)))
-            self.play(Write(Text("ChatGPT", font_size=24).next_to(image, DOWN)))
+            chatgpt_label = Text("ChatGPT", font_size=24).next_to(image, DOWN)
+            self.play(Write(chatgpt_label))
         self.play(FadeOut(image))
+        self.play(FadeOut(chatgpt_label))
 
         with self.voiceover(text="In this video, we are going to see how ChatGPT and other Large Language Models work on a high level.") as tracker:
             title = Text("Large Language Models (LLMs)", font_size=48)
