@@ -141,7 +141,7 @@ class ChatGPTVideo(VoiceoverScene):
             self.play(Write(example.move_to(ORIGIN)))
         self.play(FadeOut(example))
 
-        with self.voiceover(text="We end up with a so called Intruct or Chat model.") as tracker:
+        with self.voiceover(text="We end up with a so called Intruct or Chat model which is able to Answer questions and follow instruction.") as tracker:
             model = Rectangle(width=6, height=2, color=GREEN)
             model_label = Text("ChatGPT Model", font_size=24).next_to(model, DOWN)
             self.play(Create(model), Write(model_label))
@@ -151,6 +151,7 @@ class ChatGPTVideo(VoiceoverScene):
         with self.voiceover(text="Thank you so much for watching.") as tracker:
             thanks = Text("Thank you!", font_size=18)
             self.play(Write(thanks.move_to(ORIGIN)))
+            self.wait(2)
         self.play(FadeOut(thanks))
 
 
