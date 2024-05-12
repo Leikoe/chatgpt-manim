@@ -136,12 +136,12 @@ class ChatGPTVideo(VoiceoverScene):
 }
 """
 
-        with self.voiceover(text="This is an example of such a Q/A pair from the gsm_8k dataset. The model learns about thousand of those.") as tracker:
+        with self.voiceover(text="This is an example of such a Q/A pair from the gsm_8k dataset. The model learns about thousands of those.") as tracker:
             example = Text(json, font_size=18)
             self.play(Write(example.move_to(ORIGIN)))
         self.play(FadeOut(example))
 
-        with self.voiceover(text="We end up with a so called Intruct or Chat model which is able to Answer questions and follow instruction.") as tracker:
+        with self.voiceover(text="We end up with a so called Intruct or Chat model which is able to answer questions and follow instructions.") as tracker:
             model = Rectangle(width=6, height=2, color=GREEN)
             model_label = Text("ChatGPT Model", font_size=24).next_to(model, DOWN)
             self.play(Create(model), Write(model_label))
